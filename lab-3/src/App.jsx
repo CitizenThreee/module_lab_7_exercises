@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Emoji from './emoji'
 import { EmojiProvider } from './emojiProvider'
+import BitcoinRates from './BitcoinRates'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
     <>
       <EmojiProvider>
         <Emoji></Emoji>
+        <BitcoinRates></BitcoinRates>
       </EmojiProvider>
     </>
   )

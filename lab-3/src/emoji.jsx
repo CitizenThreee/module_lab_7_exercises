@@ -6,7 +6,6 @@ function Emoji () {
 
     return (
         <>
-            <h1>{emoji}</h1>
             <button onClick={handleSetEmoji}>Change Mood</button>
         </>
     )
