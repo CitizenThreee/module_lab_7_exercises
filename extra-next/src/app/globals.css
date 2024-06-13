@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.NavBar {
+  margin-top: 20px;
+}
+.NavBar ul { 
+  display: flex; 
+  list-style: none; 
+  justify-content: center;
+  padding: 0; 
+}
+.NavBar ul li a { 
+  padding: 1em; 
+  color: inherit; 
+  text-transform: uppercase; 
+  display: inline-block; 
+  text-decoration: none; 
+}
+.NavBar ul li a.active { 
+  font-weight: bold; 
+  color: green; 
+}
+
+.componentBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  min-height: 100vh;
+}

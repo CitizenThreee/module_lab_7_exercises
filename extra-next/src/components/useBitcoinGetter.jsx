@@ -1,4 +1,5 @@
-import { useState, useEffect, useReducer } from "react";
+"use client"
+import { useState, useEffect } from "react";
 
 export default function useBitcoinGetter(initCurrency) {
     const [currency, setCurrency] = useState(initCurrency);
@@ -12,7 +13,7 @@ export default function useBitcoinGetter(initCurrency) {
 
     useEffect(() => {
         let ignore = false;
-        fetch(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${currency}`).then(response => response.json()).then(data => {if(!ignore) {setPrice(data.bitcoin[`${currency.toLowerCase()}`])}})
+        fetch(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${currency}`).then(response => response.json()).then(data => setPrice(data.bitcoin[`${currency.toLowerCase()}`]))
 
         return() => {
             ignore = true;
